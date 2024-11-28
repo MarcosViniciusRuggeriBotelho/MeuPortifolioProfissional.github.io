@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcos Vinicius Ruggeri Botelho</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label">
+            <span class="toggle-ball"></span>
+        </label>
+    </div>
+    
+
+    <div class="video-container">
+        <video autoplay muted loop id="bg-video">
+            <source src="fundo.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <header>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#habilidades">Habilidades</a>
+            <a href="#contato">Contato</a>
+            <a href="#timeline">Minha Jornada</a>
+            <button id="toggle-theme">🌙</button>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h1>Olá, eu sou Marcos Vinicius Ruggeri Botelho</h1>
+        <div class="sobre-container">
+            <img src="img/fotomarcos.jpeg" alt="Minha Foto" class="foto-sobre">
+            <p>Sou desenvolvedor com experiência em <b>HTML, CSS, JavaScript e outras tecnologias.</b> Apaixonado por criar soluções digitais.</p>
+            <p>Atualmente, estou cursando minha graduação na <strong>Uninter</strong>, com início em fevereiro de 2023 e término previsto para junho de 2025. Tenho uma base sólida em desenvolvimento e estou sempre buscando aprender mais para aprimorar minhas habilidades técnicas e teóricas. Sou apaixonado por tecnologia e desenvolvimento de soluções inovadoras.</p>
+            <img src="img/charging.gif" alt="GIF de programação" class="gif-sobre">
+        </div>
+    </section>
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projetos-container">
+            <!-- Estrutura para cada projeto -->
+            <div class="projeto">
+                <h3>Projeto 1</h3>
+                <img src="img/projeto1.jpg" alt="Imagem do Projeto 1" style="width: 100%; height: auto;">
+                <p>Descrição breve do projeto. <a href="#" target="_blank">Ver Mais</a></p>
+            </div>
+            <div class="projeto">
+                <h3>Projeto 2</h3>
+                <img src="img/projeto2.jpg" alt="Imagem do Projeto 2" style="width: 100%; height: auto;">
+                <p>Descrição breve do projeto. <a href="#" target="_blank">Ver Mais</a></p>
+            </div>
+            <!-- Adicione mais blocos de projetos conforme necessário -->
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+
+        <!-- Hard Skills -->
+    <h3>Hard Skills</h3>
+    <ul>
+        <li>
+            <label for="html">HTML</label>
+            <progress id="html" value="100" max="100"></progress> <span>100%</span>
+        </li>
+        <li>
+            <label for="css">CSS</label>
+            <progress id="css" value="85" max="100"></progress> <span>85%</span>
+        </li>
+        <li>
+            <label for="javascript">JavaScript</label>
+            <progress id="javascript" value="80" max="100"></progress> <span>80%</span>
+        </li>
+        <li>
+            <label for="java">Java</label>
+            <progress id="java" value="75" max="100"></progress> <span>75%</span>
+        </li>
+        <li>
+            <label for="python">Python</label>
+            <progress id="python" value="90" max="100"></progress> <span>90%</span>
+        </li>
+        <li>
+            <label for="firebase">Firebase</label>
+            <progress id="firebase" value="70" max="100"></progress> <span>70%</span>
+        </li>
+        <li>
+            <label for="mysql">MySQL</label>
+            <progress id="mysql" value="90" max="100"></progress> <span>90%</span>
+        </li>
+    </ul>
+
+    <!-- Soft Skills -->
+    <h3>Soft Skills</h3>
+    <ul>
+        <li>
+            <label for="comunicacao">Comunicação</label>
+            <progress id="comunicacao" value="100" max="100"></progress> <span>100%</span>
+        </li>
+        <li>
+            <label for="trabalho-equipe">Trabalho em Equipe</label>
+            <progress id="trabalho-equipe" value="100" max="100"></progress> <span>100%</span>
+        </li>
+        <li>
+            <label for="criatividade">Criatividade</label>
+            <progress id="criatividade" value="90" max="100"></progress> <span>90%</span>
+        </li>
+        <li>
+            <label for="resolucao-problemas">Resolução de Problemas</label>
+            <progress id="resolucao-problemas" value="88" max="100"></progress> <span>88%</span>
+        </li>
+        <li>
+            <label for="gestao-tempo">Gestão de Tempo</label>
+            <progress id="gestao-tempo" value="100" max="100"></progress> <span>100%</span>
+        </li>
+        <li>
+            <label for="resiliencia">Resiliência</label>
+            <progress id="resiliencia" value="80" max="100"></progress> <span>80%</span>
+        </li>
+        <li>
+            <label for="pensamento-critico">Pensamento Crítico</label>
+            <progress id="pensamento-critico" value="90" max="100"></progress> <span>90%</span>
+        </li>
+        <li>
+            <label for="adaptabilidade">Adaptabilidade</label>
+            <progress id="adaptabilidade" value="85" max="100"></progress> <span>85%</span>
+        </li>
+        <li>
+            <label for="networking">Networking</label>
+            <progress id="networking" value="75" max="100"></progress> <span>75%</span>
+        </li>
+    </ul>
+    </section>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Fique à vontade para entrar em contato comigo através das formas abaixo:</p>
+        <ul>
+            <li>
+                <strong><i class="fas fa-envelope"></i> Email:</strong> 
+                <a href="mailto:rugg2222@gmail.com">rugg2222@gmail.com</a>
+            </li>
+            <li>
+                <strong><i class="fas fa-phone-alt"></i> Telefone:</strong> 
+                <a href="tel:+5515997510502">(15) 99751-0502</a> <!-- Substitua com seu número de telefone -->
+            </li>
+            <li>
+                <strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong>
+                <a href="https://wa.me/5515997510502" target="_blank">Clique aqui para conversar no WhatsApp</a> <!-- Substitua com seu número do WhatsApp -->
+            </li>
+        </ul>
+    </section>
+
+    <section id="timeline">
+        <h2>Minha Jornada</h2>
+        <div class="evento">
+            <h3>2021</h3>
+            <p>Iniciei um curso de Lingua Inglesa na EasyWay por dois(2) anos.</p>
+        </div>
+        <div class="evento">
+            <h3>2023</h3>
+            <p>Iniciei meu curso de Análise e Desenvolvimento de Sistemas na Uninter.</p>
+        </div>
+    </section>
+  
+    <script src="script.js"></script>
+</body>
+</html>
+

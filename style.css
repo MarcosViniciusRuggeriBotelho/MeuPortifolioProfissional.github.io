@@ -1,0 +1,346 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+    background: #000;
+}
+
+p {
+    font-weight: 300;
+    color: #fff;
+}
+
+/* Vídeo de fundo */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    filter: brightness(50%);
+}
+
+/* Camada de sobreposição */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Cabeçalho fixo */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4caf50;
+}
+
+/* Ajuste do comportamento do scroll */
+section:target {
+    scroll-margin-top: 70px;
+}
+
+/* Seções */
+section {
+    padding: 80px 20px 40px;
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px;
+    z-index: 1;
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Animação de aparecer */
+section.aparecer {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Sobre */
+.sobre-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.foto-sobre {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+}
+
+.gif-sobre {
+    width: 200px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.projeto {
+    width: 200px;
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 8px;
+}
+
+.projeto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.projeto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo do container do toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Estilo do input invisível */
+#theme-switch {
+    display: none;
+}
+
+/* Estilo da label (aparência do switch) */
+.toggle-label {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+/* Estilo da bola do switch */
+.toggle-ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* tema claro e escuro*/
+.theme-toggler {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-toggler:hover {
+    transform: scale(1.1);
+    background: #555;
+}
+body.dark-mode {
+    background: #121212;
+    color: #f4f4f4;
+}
+
+body.dark-mode header {
+    background: #1f1f1f;
+}
+
+body.dark-mode section {
+    background: #1f1f1f;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tema escuro (quando marcado) */
+#theme-switch:checked + .toggle-label {
+    background: #4caf50; /* Cor do switch no modo escuro */
+}
+
+#theme-switch:checked + .toggle-label .toggle-ball {
+    transform: translateX(30px); /* Move a bola para a direita */
+}
+
+
+/* Habilidades */
+#habilidades ul {
+    list-style: none;
+    padding: 0;
+}
+
+#habilidades li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#habilidades li label {
+    width: 30%;
+}
+
+#habilidades li progress {
+    width: 70%;
+    height: 20px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #4caf50;
+}
+
+/* Contato */
+#contato ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#contato li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+#contato a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
+
+#contato li i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* Timeline (Minha Jornada) */
+#timeline {
+    padding: 40px 20px;
+}
+
+.evento {
+    margin: 20px 0;
+    position: relative;
+    padding-left: 40px;
+}
+
+.evento h3 {
+    background: rgba(76, 175, 80, 0.8);
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.evento::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #4caf50;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav a {
+        font-size: 0.9em;
+    }
+
+    .projetos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
